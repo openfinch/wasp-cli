@@ -1,0 +1,13 @@
+version: "3"
+services:
+    wasp:
+        image: "wasp:dev"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        hostname: wasp
+        stdin_open: true
+        tty: true
+        working_dir: '/wasp-dev'
+        volumes:
+            - ".:/wasp-dev"
